@@ -1,0 +1,117 @@
+<style>
+.container {
+    margin-top: 50px;
+}
+
+.table-responsive {
+    margin-top: 20px; 
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    background-color: #f8f9fa; 
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-striped tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075); 
+}
+
+.alert {
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.text-success {
+    color: #28a745; 
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+</style>
+<%- include('layout/header') %>
+
+<div class="container">
+    <div class="row my-4">
+       <div class="col-lg-12">
+        <% if(message) {%>
+            <div class="alert alert-dismissible fade show alert-<% message.type %> bg-primary" role="alert" >
+                <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                <strong>
+                    <%= message.message %>
+                </strong>
+            </div>
+
+        <%}%>
+        <div class="table-responsive">
+            <% if(users != '') {%>
+                <table class="table table-striped text-center my-3">
+                    <thead>
+                        <tr class="table-secondary">
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>E-Mail</th>
+                            <th>Telephone</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% users.forEach((row, index) => {%>
+                            <tr class="align-middle">
+                                <td> <%= index %></td>
+                                <td><img src="<%= row.image %>" width="50" class="img-thumbnail"/></td>
+                                <td><%= row.nom %></td>
+                                <td><%= row.prenom %></td>
+                                <td><%= row.email %></td>
+                                <td><%= row.telephone %></td>
+                                <td><a href="/edit/<%= row._id %>" class="text-success"><i class="fas fa-edit fa-lg mx-1"></i>
+                                </a><a href="/delete/<%= row._id %>" class="text-danger"><i class="fas fa-trash fa-lg mx-1"></i>
+                                </a></td>
+                            </tr>
+                        <%}) %>
+                    </tbody>
+                </table>
+            <%} else {%>
+                <h1 class="text-center text-secondary mt-5">Aucun utilisateur trouvé dans la base de données !</h1>
+            <%}%>
+        </div>
+    </div> 
+    </div>   
+</div>
+<%- include('layout/footer') %>

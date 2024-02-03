@@ -1,0 +1,98 @@
+[{
+  "_id": {
+    "$oid": "65b63040ccac0522c61b5011"
+  },
+  "nom": "Idoudi",
+  "prenom": "Ilef",
+  "email": "ilefidoudi3@gmail.com",
+  "telephone": "26866871",
+  "image": "image_1706438720390_ilef.jpg",
+  "created": {
+    "$date": "2024-01-28T10:45:20.403Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b63064ccac0522c61b5014"
+  },
+  "nom": "Romthan",
+  "prenom": "Ranim",
+  "email": "ranimromdhane2003@gmail.com",
+  "telephone": "29686810",
+  "image": "image_1706438756616_ranim.jpg",
+  "created": {
+    "$date": "2024-01-28T10:45:56.622Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b63081ccac0522c61b5017"
+  },
+  "nom": "Idoudi",
+  "prenom": "Imen",
+  "email": "majidimen12345@gmail.com",
+  "telephone": "58784740",
+  "image": "image_1706438785483_imen.jpg",
+  "created": {
+    "$date": "2024-01-28T10:46:25.487Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b6309eccac0522c61b501a"
+  },
+  "nom": "Hamdi",
+  "prenom": "Intissar",
+  "email": "intissarhamdi23@gmail.com",
+  "telephone": "23199290",
+  "image": "image_1706438814032_intissar.jpg",
+  "created": {
+    "$date": "2024-01-28T10:46:54.040Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b630beccac0522c61b501d"
+  },
+  "nom": "Bessalah",
+  "prenom": "Nessrine  ",
+  "email": "Nessrinebessalah4@gmail.com",
+  "telephone": "56112891",
+  "image": "image_1706438846091_nessrine.jpg",
+  "created": {
+    "$date": "2024-01-28T10:47:26.095Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b630faccac0522c61b5020"
+  },
+  "nom": "Bouali",
+  "prenom": "Imen  ",
+  "email": "boualiimen11@gmail.com",
+  "telephone": "56114200",
+  "image": "image_1706438906098_imenb.png",
+  "created": {
+    "$date": "2024-01-28T10:48:26.105Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b65ebe8751df0811223153"
+  },
+  "nom": "Idoudi",
+  "prenom": "Achoik",
+  "email": "Idoudiachwak@gmail.com",
+  "telephone": "21724782",
+  "image": "image_1706450622979_achoik.jpg",
+  "created": {
+    "$date": "2024-01-28T14:03:42.991Z"
+  },
+  "__v": 0
+}]

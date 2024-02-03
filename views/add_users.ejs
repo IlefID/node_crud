@@ -1,0 +1,85 @@
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    .card {
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+   div .card-header {
+        background-color: hsl(188, 78%, 41%);
+        color: #fff;
+        padding: 15px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .form-control {
+        margin-bottom: 15px;
+    }
+
+   div .btn {
+        background-color: hsl(188, 78%, 41%);
+        color: #fff;
+        border: none;
+    }
+
+    div .btn:hover {
+        background-color: hsl(322, 50%, 52%);
+    }
+</style>
+
+<%- include('layout/header') %>
+
+<div class="container">
+    <div class="row">
+       <div class="col-lg-6 mx-auto mt-4">
+        <div class="card shadow">
+            <div class="card-header bg-info">
+                <h3 class="text-light">Ajouter Un nouvelle Utilisateur</h3>
+            </div>
+            <div class="card-body p-4">
+                <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" class="form-control form-control-lg" placeholder="Donner le nom"required/>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="prenom">Prenom</label>
+                        <input type="text" name="prenom" class="form-control form-control-lg" placeholder="Donner le prenom"required/>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control form-control-lg" placeholder="Donner l'email" required/>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="telephone">Telephone</label>
+                        <input type="tel" name="telephone" class="form-control form-control-lg" placeholder="Donner le numero de telephone"required/>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Sélectionnez Une Image</label>
+                        <input type="file" name="image" class="form-control form-control-lg" placeholder="Sélectionnez Une Image"required/>   
+                    </div>
+                    <div class="mb-3 d-grid">
+                        <input type="submit" name="submit" value="Ajouter Un Utilisateur" class="btn btn-lg bg-info"/>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div> 
+    </div>
+    
+</div>
+<%- include('layout/footer') %>

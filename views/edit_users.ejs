@@ -1,0 +1,52 @@
+<style>
+  div .card-header,input.btn{
+   background-color:#f43c80;
+}  
+
+</style>
+
+<%- include('layout/header') %>
+
+<div class="container">
+    <div class="row">
+       <div class="col-lg-6 mx-auto mt-4">
+        <div class="card shadow">
+            <div class="card-header  " id="p">
+                <h3 class="text-light">Modifier Un Utilisateur (<%= user.prenom %>)</h3>
+            </div>
+            <div class="card-body p-4">
+                <form action="/update/<%= user._id %>" method="post" id="add-form" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" value="<%= user.nom %>" class="form-control form-control-lg" placeholder="Donner le nom"required/>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="prenom">Prenom</label>
+                        <input type="text" name="prenom"  value="<%= user.prenom %>"  class="form-control form-control-lg" placeholder="Donner le prenom"required/>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" value="<%= user.email %>"  class="form-control form-control-lg" placeholder="Donner l'email" required/>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="telephone">Telephone</label>
+                        <input type="tel" name="telephone" value="<%= user.telephone %>"  class="form-control form-control-lg" placeholder="Donner le numero de telephone"required/>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Sélectionnez Une Image</label>
+                        <input type="file" name="image"  class="form-control form-control-lg" placeholder="Sélectionnez Une Image"/>  
+                        <img src="/<%= user.image %>" width="100" class="img-thumbnail mt-1"/> 
+                    </div>
+                    <input type="hidden" name="old_image" value="<%= user.image %>" />
+                    <div class="mb-3 d-grid" id="p">
+                        <input type="submit" name="submit" value="Modifier Un Utilisateur" class="btn btn-warning  btn-lg  	--bs-$indigo-200-text-emphasis"/>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div> 
+    </div>    
+</div>
+<%- include('layout/footer') %>
